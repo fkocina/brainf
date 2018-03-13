@@ -1,0 +1,12 @@
+_Brainf:_Compiler_of_Brainf***_code_
+Transforms Brainf*** code into C code which is compiled and executed.
+
+_Dependencies_
+The software is written for Linux and uses following programs/libraries:
+- C compiler (e.g. gcc),
+- make.
+
+_License_
+GPLv3 (C) Filip Kocina
+You should have received a copy of the license; if not, see
+<http://www.gnu.org/licenses/>.

@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+DIR=
+trap '' USR1
+trap '[ -d "$DIR" ] && { rm -f -- "$DIR"/brainf{,.c}; rmdir -- "$DIR"; }' EXIT
+DIR=`mktemp -d`
+
+SRC=$DIR/brainf.c
+EXE=$DIR/brainf
+brainf2c "$@" >"$SRC"
+gcc -o"$EXE" "$SRC"
+"$EXE"
