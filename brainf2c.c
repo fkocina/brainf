@@ -54,7 +54,7 @@ void genShift(int count) { //operator < or > (shift left or right)
   else echo("if(head < begin) enlarge(0);"); //enlarge at the beginning on need
 }
 
-void compile(const char *program) { //compile brainf* program
+void compile(const char *program) { //compile brainf*** program
   int plus = 0, shift = 0;
   while(*program) { //generate shift if another command encountered:
     if(shift && *program != '<' && *program != '>') {
@@ -66,7 +66,7 @@ void compile(const char *program) { //compile brainf* program
       genPlus(plus);
       plus = 0;
     }
-    switch(*program++) { //brainf* operations:
+    switch(*program++) { //brainf*** operations:
       case '+': plus++; break; //increment
       case '-': plus--; break; //decrement
       case '<': shift--; break; //shift left
